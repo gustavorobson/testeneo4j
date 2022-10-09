@@ -12,7 +12,6 @@ exports.list = async (req, res, callback) => {
             ...el.get(1).properties,
 			id: el.get(0).identity.low
 		}));
-        console.log(result)
 		callback(null, 200, result);
 	} catch (e) {
 		console.log(e)
