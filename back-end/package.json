@@ -1,0 +1,59 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "author": "Gustavo Robson",
+  "description": "Teste",
+  "license": "See LICENSE",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "cheerio": "^0.20.0",
+    "cors": "^2.8.4",
+    "debug": "^4.1.1",
+    "express": "^4.16.3",
+    "express-validator": "^5.3.0",
+    "guid": "0.0.12",
+    "ip": "^1.1.5",
+    "machine-uuid": "^1.2.0",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "mongodb": "^3.1.10",
+    "morgan": "^1.9.1",
+    "multer": "^1.4.2",
+    "neo4j-driver": "^5.1.0",
+    "node-cron": "^2.0.3",
+    "pg": "^7.6.0",
+    "promise-retry": "^1.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "sequelize": "^4.37.6",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "chai": "^4.2.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.14.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/tcs_industrial/tcs-treinamento-js.git"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/tcs_industrial/tcs-treinamento-js/issues?status=new&status=open"
+  },
+  "homepage": "https://bitbucket.org/tcs_industrial/tcs-treinamento-js.git"
+}
