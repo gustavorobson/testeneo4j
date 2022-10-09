@@ -26,8 +26,10 @@ exports.insert = async (req, res, callback) => {
         const { id_usuario, dataEntrada, dataSaida } = req.body;
         const insert = `CREATE (a:Apontamento { id_usuario: "${id_usuario}", dataEntrada: "${dataEntrada}", dataSaida: "${dataSaida}"})`
         await conexao.run(insert,{});
+        const findLastInsert = `MATCH (a:Apontamento) WHERE a.id_usuario = "${id_usuario}" and a.dataEntrada = "${dataEntrada}" and a.dataSaida = "${dataSaida}" RETURN a`
+        let resultInsert = await conexao.run(findLastInsert,{});
         const relacao = `MATCH (u :Usuario),(a :Apontamento)
-        WHERE ID(u) = ${id_usuario} and a.id_usuario = '${id_usuario}'
+        WHERE ID(u) = ${id_usuario} and ID(a) = ${resultInsert.records[0].get(0).identity.low}
         CREATE (u)-[r : Pertence]->(a)
         RETURN u, a`
         let result = await conexao.run(relacao,{});
