@@ -138,7 +138,7 @@ export default {
     apagaRegistro(id) {
       swal({
         title: "Excluir Registro ?",
-        text: "você não poderá reverter o processo !",
+        text: "O usuário só será excluído caso não tenha apontamentos em seu nome!",
         icon: "warning",
         buttons: {
           cancel: 'Cancelar',
